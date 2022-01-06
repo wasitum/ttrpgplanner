@@ -22,4 +22,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::post('/game/{game}/signout', [PageController::class, 'signout'])->name('signoutGame');
     Route::post('/date/{game}', [PageController::class, 'addDate'])->name('addDate');
     Route::post('/toggledate/{date}', [PageController::class, 'toggleDate'])->name('toggleDate');
+    Route::delete('/delete-game/{game}', [PageController::class, 'deleteGame'])->name('deleteGame');
 });

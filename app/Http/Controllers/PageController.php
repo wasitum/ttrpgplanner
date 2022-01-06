@@ -76,4 +76,10 @@ class PageController extends Controller
         }
         return redirect()->to('/game/'.$date->game->id);
     }
+
+    public function deleteGame(Request $request, Game $game)
+    {
+        $game->delete();
+        return redirect()->to('/dashboard');
+    }
 }
